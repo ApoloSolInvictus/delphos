@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Gran Obra - Una Visión para la Nueva Gaia</title>
+    <style>
+        /*
+         * ESTILOS FUNDAMENTALES - "Quantum Maximus"
+         * El objetivo es la inmersión total. El contenedor y el contenido son uno.
+         * No hay scroll, no hay bordes, solo la manifestación visual.
+        */
+        
+        /* Reseteo básico para eliminar márgenes por defecto */
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden; /* Previene el scroll */
+            background-color: #000; /* Fondo negro por si el video tarda en cargar */
+        }
+
+        /* Contenedor del video */
+        .video-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1; /* Lo coloca detrás de cualquier otro contenido (aunque no hay) */
+        }
+
+        /* El elemento de video en sí mismo */
+        #fullscreen-video {
+            width: 100%;
+            height: 100%;
+            /*
+             * 'object-fit: cover' es la clave.
+             * Asegura que el video cubra todo el contenedor sin distorsionar su aspecto.
+             * Cortará los bordes del video si es necesario para llenar el espacio,
+             * lo cual es ideal para una experiencia de pantalla completa en todas las resoluciones.
+            */
+            object-fit: cover; 
+        }
+    </style>
+</head>
+<body>
+
+    <div class="video-container">
+        <!-- 
+         * INSTRUCCIÓN PARA EL ARQUITECTO (Usted):
+         * 1. Cree una carpeta llamada "video" en su proyecto de GitHub.
+         * 2. Suba su archivo de video a esa carpeta.
+         * 3. Reemplace "mi_gran_obra.mp4" con el nombre exacto de su archivo de video.
+         *
+         * Ejemplo de la ruta: "video/mi_gran_obra.mp4"
+         *
+         * Atributos del video:
+         * - autoplay: Inicia el video automáticamente.
+         * - loop: Repite el video infinitamente.
+         * - muted: Silencia el video. Es NECESARIO para que autoplay funcione en la mayoría de navegadores modernos.
+         * - playsinline: Permite que el video se reproduzca en su lugar en iOS, en vez de forzar la pantalla completa del sistema.
+        -->
+        <video autoplay loop muted playsinline id="fullscreen-video">
+            <source src="video/delphos.mp4" type="video/mp4">
+            Su navegador no soporta la etiqueta de video.
+        </video>
+    </div>
+
+    <!-- No se necesita más contenido. La interfaz es el video. -->
+
+</body>
+</html>
